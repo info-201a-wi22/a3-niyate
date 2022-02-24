@@ -62,8 +62,8 @@ proportion_black_GA <- incarceration_data %>%
   filter(year == 2018) %>%
   filter(state == "GA") %>%
   summarize(black_jail_GA = sum(black_jail_pop, na.rm = TRUE),
-            black_pop_GA = sum(black_pop_15to64, na.rm = TRUE)) %>% 
-  mutate(black_prop_GA = (black_jail_GA / black_pop_GA), na.rm = TRUE) %>% 
+            jail_pop_GA = sum(total_jail_pop, na.rm = TRUE)) %>% 
+  mutate(black_prop_GA = (black_jail_GA / jail_pop_GA), na.rm = TRUE) %>% 
   pull(black_prop_GA)
 
 #9. Proportion of white people in jail compared to white population in 2018
@@ -72,8 +72,8 @@ proportion_white_GA <- incarceration_data %>%
   filter(year == 2018) %>%
   filter(state == "GA") %>%
   summarize(white_jail_GA = sum(white_jail_pop, na.rm = TRUE),
-            white_pop_GA = sum(white_pop_15to64, na.rm = TRUE)) %>%
-  mutate(white_prop_GA = (white_jail_GA / white_pop_GA), na.rm = TRUE) %>%
+            jail_pop_GA = sum(total_jail_pop, na.rm = TRUE)) %>%
+  mutate(white_prop_GA = (white_jail_GA / jail_pop_GA), na.rm = TRUE) %>%
   pull(white_prop_GA)
 
  

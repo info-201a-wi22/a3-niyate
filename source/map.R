@@ -10,8 +10,8 @@ incarceration_data <- read.csv("https://raw.githubusercontent.com/vera-institute
 
 ##Data Wrangling
 
-#Found the proportion of black people in jail compared to the total black
-#population per county
+#Found the proportion of black people in jail compared to the total
+#number of people in jail for each state
 black_map <- incarceration_data %>%
   filter(year == 2018) %>%
   group_by(fips) %>%
@@ -53,7 +53,7 @@ map <- ggplot(data = df_map) +
                              fill = black_prop_jail),
                size = .1,
                alpha = .9) +
-  labs( title = "Proportion of Black People in Jail compared to Population",
+  labs( title = "Proportion of Black People in Jail compared to Jail Population",
         fill = "Black Proportion") +
   scale_fill_continuous(low = "#CCFFCB", high = "#A846A0") +
   coord_map() +
