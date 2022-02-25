@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 ## **INTRODUCTION** 
 This data set focuses on incarcerations in the United States of America. Providing
@@ -16,11 +16,11 @@ the trends of race when it comes to prison and jail populations. Giving readers 
 ```{r, include = FALSE}
 source("../source/analysis.R")
 ```
-1. The average number of black people in prison in 2013:
+1. The average number of black people in jail in 2013:
 ```{r avg_black_people, echo = FALSE}
 (avg_black_people)
 ```
-2. The average number of white people in prison in 2013:
+2. The average number of white people in jail in 2013:
 
 ```{r avg_white_people, echo = FALSE}
 (avg_white_people)

@@ -15,15 +15,15 @@ most_recent_year <- incarceration_data %>%
 
 #1: avg value of black people in jail in 2013
 avg_black_people <- incarceration_data %>%
+  drop_na() %>% 
   filter(year == 2013) %>%
-  summarize(black_people = sum(black_jail_pop, na.rm = TRUE)) %>%
-  summarize(avg = mean(black_people, na.rm = TRUE)) %>%
+  summarize(avg = mean(black_jail_pop, na.rm = TRUE)) %>%
   pull(avg)
 #2:avg value of white people in jail in 2013
 avg_white_people <- incarceration_data %>%
+  drop_na() %>% 
   filter(year == 2013) %>%
-  summarize(white_people = sum(white_jail_pop, na.rm = TRUE)) %>%
-  summarize(avg = mean(white_people, na.rm = TRUE)) %>%
+  summarise(avg = mean(white_jail_pop, na.rm = TRUE)) %>%
   pull(avg)
 
 #3. avg value of black people in prison as of 2018:
