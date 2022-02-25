@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## **INTRODUCTION** 
 This data set focuses on incarcerations in the United States of America. Providing
 data on both the county and state levels, in addition one is able to analyze the
-the trends of race when it comes to prison populations of prison admissions. Giving readers a dive into the racist values Americas prison/jail system is built upon. People of color have been constantly incarcerated at disproportionate rates, as a result of a flawed system. The variable I am choosing to analyze is jail and prison population rates among black individuals, and their other race counterparts. I have chosen to focus on this specific race because they have been affected by racism in the prison system the most. As police were first created to "Slave Patrol". Even though we have come a long way from slavery, black people are still being patroled I focus on years 2013 for comparing jail and prison populations as the data set only has prison data for up until 2013. For the rest of my values I chose to compare values in 2018, as that is the most recent year in the data set. I have decided to calculate the following values of interest:
+the trends of race when it comes to prison and jail populations. Giving readers a dive into the racist values Americas prison/jail system is built upon. People of color have been constantly incarcerated at disproportionate rates, as a result of a flawed system. The variable I am choosing to analyze is jail and prison population rates among black individuals, and their other race counterparts. I have chosen to focus on this specific race because they have been affected by racism in the prison system the most. As police were first created to "Slave Patrol". Even though we have come a long way from slavery, black people are still being patroled I focus on years 2013 for comparing jail and prison populations as the data set only has prison data for up until 2013. For the rest of my values I chose to compare values in 2018, as that is the most recent year in the data set. I have decided to calculate the following values of interest:
 
 ```{r, include = FALSE}
 source("../source/analysis.R")
@@ -40,7 +40,7 @@ As seen one can compare the two, and notice that in 2013 there are **_more_** wh
 (avg_prison_white_people)
 ```
 
-However, after looking at this one can see that there are **more black people** in prison on average than there are white people. This shows that although white people may be in jail, which is a place typically for less serious crimes; black people make up the prison populations which are places for serious crimes. Showing that black people tend to be punished to most serious extent more than their white peers. 
+However, after looking at this one can see that there are **more black people** in prison on average than there are white people. This shows that although white people may be in jail, which is a place typically for less serious crimes. Black people make up the prison populations which are places for serious crimes. Showing that black people tend to be punished to most serious extent more than their white peers. 
 
 5. The state with highest amount of people black people in jail in 2018:
 
@@ -56,17 +56,17 @@ This is relevant because through knowing which state had the most black people i
 
 7. Proportion of black people in jail compared to the jail population in Georgia (2018):
 
-```{r proportion_black_GA, echo = FALSE}
-proportion_black_GA
+```{r proportion_black_ga, echo = FALSE}
+proportion_black_ga
 ```
-This shows how the black jail population levels compare to the total state jail population levels this was an interesting value to calculate because since GA is the state with the highest number of black people in jail I wanted to see how much black people make up for the total jail in that state.  
+This shows how the black jail population levels compare to the total state jail population levels this was an interesting value to calculate because since GA is the state with the highest number of black people in jail I wanted to see how much black people make up for the total jail population in that state.  
 
 8. Proportion of white people in jail compared to the jail population in Georgia (2018):
 
-```{r proportion_white_GA, echo = FALSE}
-proportion_white_GA
+```{r proportion_white_ga, echo = FALSE}
+proportion_white_ga
 ```
-These are values of interest as it shows that black people are proportionally in jail more as compared to their white counterparts. In the sense that .50 while of Georgia's jail population is black,while only .40 of Georgia's jail population is white. 
+These are values of interest as it shows that black people are proportionally in jail more as compared to their white counterparts. In the sense that .50 while of Georgia's jail population is black, while only .40 of Georgia's jail population is white. 
 
 ## **CHART 1: TRENDLINE**
 ```{r, include = FALSE}
@@ -77,7 +77,7 @@ source("../source/trendline.R")
 plot(small_trendline)
 ```
 
-This trend line shows the trend of prisoners over time by race in the state of Georgia. I chose to look at the state of Georgia specifically because it Georgia had the highest number of black people in jail. This was a sad fact that was calculated, but this graph not only shows how the population of black people in jail have changed but it also shows how the population of other races have changed since 1985. I decided to start the chart at 1985 because that it when data on jail populations is available. Lastly, looking at this chart one can see that Black jail populations are significantly higher than all counterparts such as white, Latin, native Americans, and Asian pacific islanders. 
+This trend line shows the trend of prisoners over time by race in the state of Georgia. I chose to look at the state of Georgia specifically because it had the highest number of black people in jail. This was a sad fact that was calculated, but this graph not only shows how the population of black people in jail have changed but it also shows how the population of other races have changed since 1985. I decided to start the chart at 1985 because that it when data on jail populations is available. Lastly, looking at this chart one can see that Black jail populations are significantly higher than all counterparts such as white, Latin, Native Americans, and Asian pacific islanders. As can be seen in the year of 2018 there was 21,921 black people in jail, and 17,572 white people in jail. Then when looking at Georgia's black and white population, as the black population in GA was 2,316,598 and the white population was 3,645,125. Bringing on the question why black people are a minority in the population, but a majority in jail?
 
 ## **CHART 2: SCATTERPLOT**:
 ```{r, include = FALSE}
@@ -89,7 +89,7 @@ plot(scatter_plot)
 ```
 
 
-This scatter plot shows the comparison between the total number of people aged 15-64 in the U.S. and the total number of people jailed in the U.S. The reasn why I chose to include this graph is it compares how sex is a factor too. As seen many more males are arrested compared to females as the population increases. This may be helpful in breaking down why black men are jailed the highest, by giving data showing that men in general are incarcerated the highest. Sex and race go hand in hand in terms of discrimination, therefore it is important to recongnize that men are arrested more than woman. 
+This scatter plot shows the comparison between the total number of people aged 15-64 in the U.S. and the total number of people jailed in the U.S. The reason why I chose to include this graph is it compares how sex is a factor too. As seen many more males are arrested compared to females as the population increases. This may be helpful in breaking down why black men are jailed the highest, by giving data showing that men in general are incarcerated the highest. Sex and race go hand in hand in terms of discrimination, therefore it is important to recognize that men are arrested more than woman. By first understanding that men are targeted the most, we are then able to further examine incarceration rates by race.  
 
 ## **CHART 3: MAP**:
 ```{r, include = FALSE}
@@ -101,6 +101,6 @@ plot(map)
 ```
 
 
-This map shows the proportion of black people in jail, compared to the total number of people in that states jails. This shows where more black people are jailed in higher populations compared to their total jail population in the U.S. this is shown to be higher among the states that are in the south, as they are darker on the gradient. This brings on the question as to why these states have higher proportions of black people compared to the total jail populations. One can infer that the states dark because they have historically been known to have slavery, and one can assume that past still affects them till this day. This only opens up a part of the converstaion, there are other factors to be determined but through this map we are able to see which region of America we need to focus on, the south.            
+This map shows the proportion of black people in jail, compared to the total number of people in that states jails. This shows where more black people are jailed in higher populations compared to their total jail population in the U.S. this is shown to be higher among the states that are in the south, as they are darker on the gradient. This brings on the question as to why these states have higher proportions of black people compared to the total jail populations. One can infer that the states in the south are dark because they have historically been known to have slavery, and one can assume that past still affects them till this day. This only opens up a part of the conversation, there are other factors to be determined but through this map we are able to see which region of America we need to focus on, the south.            
 
 

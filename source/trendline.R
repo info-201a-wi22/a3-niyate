@@ -7,6 +7,7 @@ incarceration_data <- read.csv("https://raw.githubusercontent.com/vera-institute
 
 
 #DATA WRANGLING:
+#found white population in Georgia: 
 #found the sum of jail populations over all the races in the state of Georgia
 #did this because Georgia is the state with the highest number of black people
 #in jail
@@ -21,10 +22,8 @@ df_trendline_1 <- incarceration_data %>%
             native = sum(native_jail_pop, na.rm = TRUE)) %>%
   gather(key = race, value = population, - year)
 
-
-
-#Created a trend line showing how jail populations have changed from 1984 by race
-#added points so the years are clearer
+#Created a trend line showing how jail populations have changed from 1984
+#by race, and added points so the years are clearer
 small_trendline <- ggplot(data = df_trendline_1) +
 geom_line(mapping = aes(x = year, y = population, color = race)) +
   geom_point(mapping = aes(x = year, y = population),
@@ -34,9 +33,7 @@ geom_line(mapping = aes(x = year, y = population, color = race)) +
     title = "Jail Populations by Race Over Time In Georgia, USA",
     x = "Year",
     y = "Amount of People in Jail")
+
+trendline <- ggplotly(small_trendline)
+
 library("lintr")
-
-               
- 
-
-

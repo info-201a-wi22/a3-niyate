@@ -28,11 +28,9 @@ county <- map_data("county")
 #get a data set that has both `polyname` and `fips`
 df1 <- county %>%
   unite("polyname", region, subregion, sep = ",") %>%
-  left_join(county.fips, by = "polyname") 
-  
-##Joined the `df1` and `black_map` data sets together   
-df_map <- full_join(df1, black_map, by = "fips") 
-
+  left_join(county.fips, by = "polyname")
+##Joined the `df1` and `black_map` data sets together
+df_map <- full_join(df1, black_map, by = "fips")
 View(df_map)
 ##DEFINED A MINIMALIST THEME AND SAVED IT TO variable `blank_them`:
 blank_theme <- theme_bw() +
@@ -47,25 +45,19 @@ blank_theme <- theme_bw() +
     panel.border = element_blank()
     )
 
-##made a map showing the proportion of black people, how do I make this prettier 
+##made a map showing the proportion of black people in jail compared to
+#total jail population
 map <- ggplot(data = df_map) +
   geom_polygon(mapping = aes(x = long, y = lat, group = group,
                              fill = black_prop_jail),
                size = .1,
                alpha = .9) +
-  labs( title = "Proportion of Black People in Jail compared to Jail Population",
+  labs(title = "Proportion of Black People in Jail compared to Jail Population",
         fill = "Black Proportion") +
-  scale_fill_continuous(low = "#CCFFCB", high = "#A846A0") +
+  scale_fill_continuous(low = "#CCFFCB",
+                        high = "#A846A0") +
   coord_map() +
   blank_theme
 map
 
 library(lintr)
-
-  
-  
-
-
-                   
-
-
