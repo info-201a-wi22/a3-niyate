@@ -8,65 +8,16 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
-## **INTRODUCTION** 
-This data set focuses on incarcerations in the United States of America. Providing
-data on both the county and state levels, in addition one is able to analyze the
-the trends of race when it comes to prison and jail populations. Giving readers a dive into the racist values Americas prison/jail system is built upon. People of color have been constantly incarcerated at disproportionate rates, as a result of a flawed system. The variable I am choosing to analyze is jail and prison population rates among black individuals, and their other race counterparts. I have chosen to focus on this specific race because they have been affected by racism in the prison system the most. As police were first created to "Slave Patrol". Even though we have come a long way from slavery, black people are still being patroled.I focus on years 2013 for comparing jail and prison populations as the data set only has prison data for up until 2013. For the rest of my values I chose to compare values in 2018, as that is the most recent year in the data set. I have decided to calculate the following values of interest:
 
 ```{r, include = FALSE}
 source("../source/analysis.R")
 ```
-1. The average number of black people in jail in 2013:
-```{r avg_black_people, echo = FALSE}
-(avg_black_people)
-```
-2. The average number of white people in jail in 2013:
 
-```{r avg_white_people, echo = FALSE}
-(avg_white_people)
-```
-
-As seen one can compare the two, and notice that in 2013 there are **_more_** white people in jail compared to black people. 
-
-3.The average number of black people in prison in of 2013:
-
-```{r avg_prison_black_people, echo = FALSE}
-(avg_prison_black_people)
-```
-
-4. The average number of white people in prison in 2013: 
-
-```{r avg_prison_white_people, echo = FALSE}
-(avg_prison_white_people)
-```
-
-However, after looking at this one can see that there are **more black people** in prison on average than there are white people. This shows that although white people may be in jail, which is a place typically for less serious crimes. Black people make up the prison populations which are places for serious crimes. Showing that black people tend to be punished to most serious extent more than their white peers. 
-
-5. The state with highest amount of people black people in jail in 2018:
-
-```{r state_high_black_jail_pop, echo = FALSE}
-(state_high_black_jail_pop)
-```
-6. The states with the lowest amount of black people in jail in 2018: 
-
-```{r state_low_black_pop, echo = FALSE}
-(state_low_black_jail_pop)
-```
-This is relevant because through knowing which state had the most black people in jail gives people a sense of the types of places that convict black people the most, in this case the state was Georgia which is a state in the south. As states in the south typically tend to be more racist, this supports the assumption that southern states have more black people in jail. In terms of the the states with the lowest black people in jail, the states listed made sense as Connecticut is in the northern region of the U.S. which tends to be less racist. In terms of states like Hawaii, Rhode Island, and Vermont, they probably had less black people in jail because the population of these states is lower in general. 
-
-7. Proportion of black people in jail compared to the jail population in Georgia (2018):
-
-```{r proportion_black_ga, echo = FALSE}
-proportion_black_ga
-```
-This shows how the black jail population levels compare to the total state jail population levels this was an interesting value to calculate because since GA is the state with the highest number of black people in jail I wanted to see how much black people make up for the total jail population in that state.  
-
-8. Proportion of white people in jail compared to the jail population in Georgia (2018):
-
-```{r proportion_white_ga, echo = FALSE}
-proportion_white_ga
-```
-These are values of interest as it shows that black people are proportionally in jail more as compared to their white counterparts. In the sense that .50 while of Georgia's jail population is black, while only .40 of Georgia's jail population is white. 
+## **INTRODUCTION** 
+This data set focuses on incarcerations in the United States of America. Providing
+data on both the county and state levels, in addition one is able to analyze the
+the trends of race when it comes to prison and jail populations. Giving readers a dive into the racist values Americas prison/jail system is built upon. People of color have been constantly incarcerated at disproportionate rates, as a result of a flawed system. The variable I am choosing to analyze is jail and prison population rates among black individuals, and their other race counterparts. I have chosen to focus on this specific race because they have been affected by racism in the prison system the most. As police were first created to "Slave Patrol". Even though we have come a long way from slavery, black people are still being patroled.I focus on years 2013 for comparing jail and prison populations as the data set only has prison data for up until 2013. For the rest of my values I chose to compare values in 2018, as that is the most recent year in the data set. I have decided to calculate the following values of interest: the average number of black people in 2018 **`r avg_black_people`** compared to white people which is **`r avg_white_people`**.As seen one can compare the two, and notice that in 2013 there are **_more_** white people in jail compared to black people. I compared this to the average number of black people in prison in of 2013, **`r avg_prison_black_people`**, where the average number of white people in prison is **`r avg_prison_white_people`**. However, after looking at this one can see that there are **_more black people_** in prison on average than there are white people. This shows that although white people may be in jail, which is a place typically for less serious crimes. Black people make up the prison populations which are places for serious crimes. Showing that black people tend to be punished to most serious extent more than their white peers. I also calculated the state with highest amount of people black people in jail in 2018 which was **`r state_high_black_jail_pop`** and the states with the lowest number of jailed black people which are, **`r state_low_black_jail_pop`**. This is relevant because through knowing which state had the most black people in jail gives people a sense of the types of places that convict black people the most, in this case the state was Georgia which is a state in the south. As states in the south typically tend to be more racist, this supports the assumption that southern states have more black people in jail. In terms of the the states with the lowest black people in jail, the states listed made sense as Connecticut is in the northern region of the U.S. which tends to be less racist. In terms of states like Hawaii, Rhode Island, and Vermont, they probably had less black people in jail because the population of these states is lower in general. With this I calculated the proportion of black people in jail compared to the jail population in Georgia 2018: **`r proportion_black_ga`**. This shows how the black jail population levels compare to the total state jail population levels this was an interesting value to calculate because since GA is the state with the highest number of black people in jail I wanted to see how much black people make up for the total jail population in that state.  
+I compared to the white proportion which was **`r proportion_white_ga`**. This shows that black people are proportionally in jail more as compared to their white counterparts. In the sense that .50 while of Georgia's jail population is black, while only .40 of Georgia's jail population is white. 
 
 ## **CHART 1: TRENDLINE**
 ```{r, include = FALSE}
